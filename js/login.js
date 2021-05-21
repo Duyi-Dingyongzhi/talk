@@ -35,7 +35,7 @@
       window.alert(response.msg)
       return
     }
-    response.code === 0 && window.location.replace('/')
+    response.code === 0 && window.location.replace(baseURL)
   }
   init()
 })()

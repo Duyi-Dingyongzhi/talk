@@ -31,7 +31,7 @@
   /* 退出事件 */
   const onCloseBtnClick = () => {
     sessionStorage.removeItem('token')
-    window.location.replace('/login.html')
+    window.location.replace(baseURL + 'login.html')
   }
 
   /* 滚动事件 */
@@ -79,7 +79,7 @@
     })
     if (response.code !== 0) {
       // window.alert(response.msg + '请重新进行登录')
-      window.location.replace('/login.html')
+      window.location.replace(baseURL + 'login.html')
       return
     }
     renderChatForm([{ from: 'robot', content: response.data.content }], 'end')
@@ -151,7 +151,7 @@
   const checkFrontEnd = (response, cb) => {
     if (response.code !== 0) {
       // window.alert(response.msg + '请重新进行登录')
-      window.location.replace('/login.html')
+      window.location.replace(baseURL + 'login.html')
     } else {
       cb && cb()
     }

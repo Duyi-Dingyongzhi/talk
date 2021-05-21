@@ -77,7 +77,7 @@
     if (response.code === 400) {
       window.alert(response.msg)
     }
-    response.code === 0 && window.location.replace('/')
+    response.code === 0 && window.location.replace(baseURL)
   }
   init()
 })()
